@@ -19,4 +19,7 @@ A clean, step-by-step implementation of fundamental computer science algorithms 
 * **Selection Sort** - Finding the minimum element and moving it to the front.
 * **Insertion Sort** - Building a sorted array one element at a time.
 
-### 4.
+### 4. Linked List
+* **Linked List** - One-way node chain using forward indicators (next). Includes traversing, middle deletion, and inserting in between via pointer manipulation.
+* **Double-Ended Linked List** - One-way node chain optimized with a tail pointer shortcut. Ideal foundation for high-performance Queues ($O(1)$ insertions at the back).
+* **Doubly Linked List** - Two-way node highway utilizing both next and prev arrows. Allows bidirectional traversal and independent node deletion.
