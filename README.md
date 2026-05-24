@@ -23,3 +23,5 @@ A clean, step-by-step implementation of fundamental computer science algorithms 
 * **Linked List** - One-way node chain using forward indicators (next). Includes traversing, middle deletion, and inserting in between via pointer manipulation.
 * **Double-Ended Linked List** - One-way node chain optimized with a tail pointer shortcut. Ideal foundation for high-performance Queues.
 * **Doubly Linked List** - Two-way node highway utilizing both next and prev arrows. Allows bidirectional traversal and independent node deletion.
+
+### 5.
