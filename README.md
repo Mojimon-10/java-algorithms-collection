@@ -48,9 +48,9 @@ A clean, step-by-step implementation of fundamental computer science algorithms 
 * **Hash Table** - A lightning-fast key-value data structure that stores data using computed array indexes for near-instant retrieval.
 * **Separate Chaining** - Handles collisions by storing multiple elements in linked lists at the same index bucket.
 * **Linear Probing** - Resolves collisions by searching sequentially for the next available empty slot.
-* **/Avoiding Clustering**
-    * **Quadratic Probing** - Resolves collisions using quadratic jump intervals instead of sequential movement to reduce clustering.
-    * **Double Hashing** - Uses a second hash function to calculate jump distances, producing highly distributed probing patterns and minimizing clustering further.
+   * **/Avoiding Clustering**
+       * **Quadratic Probing** - Resolves collisions using quadratic jump intervals instead of sequential movement to reduce clustering.
+       * **Double Hashing** - Uses a second hash function to calculate jump distances, producing highly distributed probing patterns and minimizing clustering further.
 
 ### 10. Binary Tree
 * **Binary Tree** - A hierarchical data structure where each node can have at most two children: a left child and a right child.
