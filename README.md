@@ -38,3 +38,23 @@ A clean, step-by-step implementation of fundamental computer science algorithms 
 * **Quick Sort** - The reigning champ of raw, in-memory speed. It picks a Pivot number, partitions all smaller elements to the left and larger elements to the right, and recursively locks each neighborhood down in-place with zero extra memory overhead.
 
 ### 8. Big O Notations
+* **O(1)** - Constant Time - Performance never changes regardless of input size. Example: Accessing an array index directly.
+* **O(log n)** - Logarithmic Time - The problem size is repeatedly divided in half. Example: Binary Search.
+* **O(n)** - Linear Time - Performance grows proportionally with input size. Example: Linear Search.
+* **O(n log n)** - Linearithmic Time - Highly efficient divide-and-conquer complexity used in advanced sorting. Example: Merge Sort and Quick Sort (average case).
+* **O(n²)** - Quadratic Time - Usually caused by nested loops comparing every element. Example: Bubble Sort and Selection Sort.
+
+### 9. Hash Table & Hash Functions
+* **Hash Table** - A lightning-fast key-value data structure that stores data using computed array indexes for near-instant retrieval.
+* **Separate Chaining** - Handles collisions by storing multiple elements in linked lists at the same index bucket.
+* **Linear Probing** - Resolves collisions by searching sequentially for the next available empty slot.
+* **/Avoiding Clustering**
+    * **Quadratic Probing** - Resolves collisions using quadratic jump intervals instead of sequential movement to reduce clustering.
+    * **Double Hashing** - Uses a second hash function to calculate jump distances, producing highly distributed probing patterns and minimizing clustering further.
+
+### 10. Binary Tree
+* **Binary Tree** - A hierarchical data structure where each node can have at most two children: a left child and a right child.
+* **Binary Search Tree** - A specialized binary tree where smaller values go to the left subtree and larger values go to the right subtree, enabling fast searching and sorting operations.
+* **Insert Node** - Adds a new value into the correct BST position while maintaining tree ordering rules.
+* **Delete Node** - Removes a node while preserving BST structure. Handles: Deleting a leaf node. Deleting a node with one child. Deleting a node with two children using inorder successor replacement.
+* **Heap Sort** - A highly efficient sorting algorithm based on Binary Heaps. It repeatedly extracts the maximum (or minimum) element from the heap and rebuilds the structure until the array becomes sorted.
