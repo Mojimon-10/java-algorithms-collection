@@ -19,18 +19,22 @@ A clean, step-by-step implementation of fundamental computer science algorithms 
 * **Selection Sort** - Finding the minimum element and moving it to the front.
 * **Insertion Sort** - Building a sorted array one element at a time.
 
-### 4. Linked List 
+### 4. Stacks & Queues
+* **Stacks** - A vertical "Last-In, First-Out" (LIFO) data structure where items are added (push) and removed (pop) only from the top. Think of a stack of dinner plates—the last plate you put on top is always the first one you take off. Crucial for backtracking systems and tracking function calls in memory.
+* **Queues** - A horizontal "First-In, First-Out" (FIFO) data structure where items join at the back (enqueue) and leave from the front (dequeue). Just like a real-world checkout line—the first person to get in line is the first one served. Essential for print jobs, background tasks, and handling requests in order.
+
+### 5. Linked List 
 * **Linked List** - One-way node chain using forward indicators (next). Includes traversing, middle deletion, and inserting in between via pointer manipulation.
 * **Double-Ended Linked List** - One-way node chain optimized with a tail pointer shortcut. Ideal foundation for high-performance Queues.
 * **Doubly Linked List** - Two-way node highway utilizing both next and prev arrows. Allows bidirectional traversal and independent node deletion.
 
-### 5. Iteration & Recursion
+### 6. Iteration & Recursion
 * **Iteration(Loops) / Iterator(Bookmark)** - Using for, while, and do-while control structures to repeat tasks sequentially with a fixed memory footprint.
 * **Recursion (Self-Calls)** - The process where a method solves a problem by calling a smaller version of itself. Focuses on tracking the Base Case (the exit condition to prevent a stack overflow error) and the Recursive Case (stacking the execution frames).
 
-### 6. Advanced Sorting Algorithms
+### 7. Advanced Sorting Algorithms
 * **Merge Sort** - A highly predictable, stable algorithm using recursive Divide and Conquer. It chops the array down to single elements and beautifully zips them back up into new, sorted temporary arrays.
 * **Shell Sort** - An optimized variation of Insertion Sort that compares elements using jumping intervals (or gaps). It allows out-of-place numbers to "teleport" massive distances across the array before running a lightning-fast final neighbor check when the interval hits 1.
 * **Quick Sort** - The reigning champ of raw, in-memory speed. It picks a Pivot number, partitions all smaller elements to the left and larger elements to the right, and recursively locks each neighborhood down in-place with zero extra memory overhead.
 
-### 7. Big O Notations
+### 8. Big O Notations
