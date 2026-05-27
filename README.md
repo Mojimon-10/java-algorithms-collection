@@ -58,3 +58,6 @@ A clean, step-by-step implementation of fundamental computer science algorithms 
 * **Insert Node** - Adds a new value into the correct BST position while maintaining tree ordering rules.
 * **Delete Node** - Removes a node while preserving BST structure. Handles: Deleting a leaf node. Deleting a node with one child. Deleting a node with two children using inorder successor replacement.
 * **Heap Sort** - A highly efficient sorting algorithm based on Binary Heaps. It repeatedly extracts the maximum (or minimum) element from the heap and rebuilds the structure until the array becomes sorted.
+
+### 11. PRACTICES
+Put your knowledge to the test.
