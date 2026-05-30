@@ -22,15 +22,12 @@ public class longestSubstring
     public static String LongestSubstring(String s)
     {
         String longest = "";
-
         for(int i = 0; i < s.length(); i++)
         {
             String current = "";
-
             for(int j = 0; j < s.length(); j++)
             {
-                char c = s.charAt(j);
-
+                Character c = s.charAt(j);
                 if(current.contains(Character.toString(c)))
                 {
                     break;
@@ -38,12 +35,14 @@ public class longestSubstring
 
                 current += c;
 
-                if(current.length() > longest.length())
+                if(current.length()> longest.length())
                 {
-                    longest = current.strip();
+                    longest = current.trim();
                 }
             }
+
         }
+
         return longest;
     }
 

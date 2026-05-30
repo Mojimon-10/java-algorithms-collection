@@ -1,3 +1,5 @@
+
+
 /* Product of Array Except Self
 Problem:
 Given an integer array nums, return an array answer such that:
@@ -35,8 +37,8 @@ public class productofArray
                     product *= nums[j];
                 }
 
+                results[i] = product;
             }
-            results[i] = product;
         }
 
         return results;
