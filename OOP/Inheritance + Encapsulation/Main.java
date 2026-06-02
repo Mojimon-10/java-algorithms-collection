@@ -1,6 +1,7 @@
 /* Hide the internal data of an object
 and control how other code accesses it. */
-public class Main extends GoodBankAccount
+
+public class Main extends GoodBankAccount //BadBankAccount
 {
     public static void main(String[] args)
     {
