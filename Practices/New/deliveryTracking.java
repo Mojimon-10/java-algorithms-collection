@@ -126,19 +126,15 @@ import java.util.*;
 
 public class deliveryTracking
 {
-
-    public static String findBestDriver(String deliveries[])
+    public static String findBestDriver(String[] deliveries)
     {
-        HashMap<String, Integer> delivered = new HashMap<>();
-        HashMap<String, Integer> failed = new HashMap<>();
-
-        ArrayList<String> order = new ArrayList<>();
+        LinkedHashMap<String,Integer> delivered = new LinkedHashMap<>();
+        LinkedHashMap<String,Integer> failed = new LinkedHashMap<>();
 
         for(String record : deliveries)
         {
-            String[] data = record.split("\\s+");
+            String[] data = record.trim().split("\\s+");
 
-            // invalid format
             if(data.length != 2)
             {
                 continue;
@@ -147,34 +143,19 @@ public class deliveryTracking
             String driver = data[0].toLowerCase();
             String status = data[1].toLowerCase();
 
-            // ignore empty driver
             if(driver.isEmpty())
             {
                 continue;
             }
 
-            // new driver
-            if(!delivered.containsKey(driver))
-            {
-                delivered.put(driver,0);
-                failed.put(driver,0);
-                order.add(driver);
-            }
-
             if(status.equals("delivered"))
             {
-                delivered.put(
-                    driver,
-                    delivered.get(driver) + 1
-                );
+                delivered.put(driver, delivered.getOrDefault(driver, 0)+1);
             }
 
             else if(status.equals("failed"))
             {
-                failed.put(
-                    driver,
-                    failed.get(driver) + 1
-                );
+                failed.put(driver, failed.getOrDefault(driver, 0)+1);
             }
 
         }
@@ -188,8 +169,7 @@ public class deliveryTracking
         int highest = -1;
 
 
-        // check original order
-        for(String driver : order)
+        for(String driver : delivered.keySet())
         {
             if(delivered.get(driver) > highest)
             {
@@ -207,13 +187,9 @@ public class deliveryTracking
     public static void main(String args[])
     {
         Scanner sc = new Scanner(System.in);
+        String line = sc.nextLine();
+        String[] input = line.split(",");
 
-        String input = sc.nextLine();
-
-        String[] deliveries = input.split(",");
-
-        System.out.println(findBestDriver(deliveries));
-
-        sc.close();
+        System.out.println(findBestDriver(input));
     }
 }

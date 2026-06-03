@@ -112,16 +112,19 @@ public class parkingGarageCalculator
         int hour = (int)s * 3;
         float partial = s % 1;
 
-        String breakdown = "Entry";
+
+        StringBuilder breakdown = new StringBuilder(); 
+        breakdown.append("Entry, ");
 
         for(int i = 0; i < (int)s; i++)
         {
-            breakdown += ", Full";
+            breakdown.append("Full");
+            breakdown.append(", ");
         }
 
         if(partial > 0)
         {
-            breakdown += ", Partial";
+            breakdown.append("Partial");
             partial = 2;
             int payment = entryFee + hour + (int)partial;
             System.out.println("Total: " + "$" + payment);

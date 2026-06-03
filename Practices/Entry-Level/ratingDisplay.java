@@ -97,35 +97,36 @@ public class ratingDisplay
 {
     public static String displayRating(double rating)
     {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         double rounded = Math.round(rating * 2.0) / 2.0;
 
         for(int i = 0; i < 5; i++)
         {
             if(rounded >= 1)
             {
-                result += "FULL";
+                result.append("FULL");
                 rounded -= 1;
             }
 
             else if(rounded == 0.5)
             {
-                result += "HALF";
+                result.append("HALF");
                 rounded -= 0.5;
             }
 
             else
             {
-                result += "EMPTY";
+                result.append("EMPTY");
             }
 
             if(i < 4)
             {
-                result += " | ";
+                result.append(" | ");
             }
         }
 
-        return result;
+        String result2 = result.toString();
+        return result2;
     }
 
     public static void main(String args[])
