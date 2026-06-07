@@ -81,7 +81,7 @@ import java.util.*;
 
 public class browserHistory
 {
-    public static void start(String[] s)
+    public static String start(String[] s)
     {
         ArrayList<String> history = new ArrayList<>();
 
@@ -100,7 +100,7 @@ public class browserHistory
             }
         }
 
-        System.out.println(String.join(" -> ", history));
+        return (String.join(" -> ", history));
 
     }
 
@@ -109,7 +109,7 @@ public class browserHistory
         Scanner sc = new Scanner(System.in);
         String[] s = sc.nextLine().split("\\s");
 
-        start(s);
+        System.out.println(start(s));
 
         sc.close();
     }
