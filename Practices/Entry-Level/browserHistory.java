@@ -81,18 +81,18 @@ import java.util.*;
 
 public class browserHistory
 {
-    public static String start(String[] s)
+    public static String browserHistory(String[] s)
     {
         ArrayList<String> history = new ArrayList<>();
 
-        for(String current : s)
+        for(String input : s)
         {
-            if(history.contains(current))
+            if(input.contains(input))
             {
-                history.remove(current);
+                history.remove(input);
             }
 
-            history.add(current);
+            history.add(input);
 
             if(history.size() > 5)
             {
@@ -101,15 +101,13 @@ public class browserHistory
         }
 
         return (String.join(" -> ", history));
-
     }
-
     public static void main(String args[])
     {
         Scanner sc = new Scanner(System.in);
-        String[] s = sc.nextLine().split("\\s");
+        String[] input = sc.nextLine().split("\\s");
 
-        System.out.println(start(s));
+        System.out.println(browserHistory(input));
 
         sc.close();
     }

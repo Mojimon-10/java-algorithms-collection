@@ -79,46 +79,45 @@ public static void findMostActiveUser(String[] users)
 import java.util.*;
 public class mostActive
 {
-    public static String start(String s)
+    public static String mostActive(String s)
     {
-        HashMap<String, Integer> users = new HashMap<>();
+        HashMap<String, Integer> map = new HashMap<>();
+        String [] cleaned = s.replaceAll("[^a-z0-9\\s]", "").split("\\s");
+        
         int count = 0;
         String winner = "";
 
-        String[] cleaned = s.toLowerCase().replaceAll("[^a-z0-9\\s]", "").split("\\s");
-
-        for(String x : cleaned)
+        for(String user : cleaned)
         {
-            if (x == null || x.trim().isEmpty()) 
+            if(user == null || user.trim().isEmpty())
             {
                 continue;
             }
 
-            users.put(x, users.getOrDefault(x, 0) + 1);
+            map.put(user, map.getOrDefault(user, 0) + 1);
 
-            if(users.get(x) > count)
+            if(map.get(user) > count)
             {
-                count = users.get(x);
-                winner = x;
+                count = map.get(user);
+                winner = user;
             }
-
         }
 
-        if(users.isEmpty())
+        if(map.isEmpty())
         {
-            return "No valid users found.";
+            return ("No valid input.");
         }
 
-        return (winner + ": " + count);
+        return (winner + ":" + count);
     }
-
     public static void main(String args[])
     {
         Scanner sc = new Scanner(System.in);
+
         if(sc.hasNext())
         {
             String input = sc.nextLine();
-            System.out.println(start(input));
+            System.out.println(mostActive(input));
         }
 
         sc.close();

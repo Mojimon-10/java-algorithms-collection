@@ -121,11 +121,7 @@ public class ratingDisplay
 
             if(i < 4)
             {
-<<<<<<< HEAD
                 result.append(" | ");
-=======
-                 result.append(" | ");
->>>>>>> ef08c3573181e2f73cd2233832ffe6076f1cc180
             }
         }
 
