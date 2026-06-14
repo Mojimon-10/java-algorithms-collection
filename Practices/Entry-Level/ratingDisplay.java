@@ -125,8 +125,7 @@ public class ratingDisplay
             }
         }
 
-        String result2 = result.toString();
-        return result2;
+        return result.toString();
     }
 
     public static void main(String args[])
